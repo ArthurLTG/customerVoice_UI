@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import subprocess
 import random
+import openpyxl
 
 brands_similar_to_lacoste = [
     "Ralph Lauren",
