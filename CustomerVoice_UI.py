@@ -95,7 +95,7 @@ def select_brand(brand_list, index):
     return brand_list[index]
 
 
-st. set_page_config(layout="wide")
+st. set_page_config(layout="wide",theme="dark")
 st.subheader("1. Uploader le fichier issu de CustomerVoice, en respectant les spec suivantes :")
 with st.expander("SPEC FILE", expanded=True):
     st.write("- Format du fichier .xlsx")
