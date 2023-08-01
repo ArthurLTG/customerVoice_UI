@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import subprocess
 import random
+import pyperclip
 
 
 brands_similar_to_lacoste = [
