@@ -177,20 +177,22 @@ st.markdown("---")
 st.write(" ")
 
 
-is_copied = copy_to_clipboard(prompt)
+#is_copied = copy_to_clipboard(prompt)
+
 
 
 st.subheader("4. Copier-Coller dans l'interface ChatGPT le prompt enrichi")
 if is_copied == True:
     st.success("Copied ✅ Paste it in ChatGPT UI")
 else:
-    st.warning("Not Copied - Doi it manually ;)")
+    st.warning("Not Copied - Doi it manually by clicking the icon at the top right corner of the bow below")
 
-st.write(prompt[:1000])
+st.code(prompt)
+
 
 st.markdown("---")
 st.write(" ")
-
+st.subheader("30 commentaires parmi la sélection")
 colA, colB, colC = st.columns([1,1,1])
 with colA:
     rand_commA = rand_comm[:10]
@@ -206,6 +208,5 @@ with colC:
     rand_commC = rand_comm[21:30]
     for com in rand_commC:
         st.write(com)
-
 
 
