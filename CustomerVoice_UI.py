@@ -85,10 +85,17 @@ def Generate_prompt(df,i1,i2,text):
 
 
 
+#def copy_to_clipboard(text):
+    #subprocess.run(['clip'], input=text.strip().encode('utf-16'), check=True)    
+    #return is_copied
+
 def copy_to_clipboard(text):
-    subprocess.run(['clip'], input=text.strip().encode('utf-16'), check=True)
-    is_copied = True
-    return is_copied
+    try:
+        pyperclip.copy(text.strip())
+        is_copied = True
+        return True
+    except pyperclip.PyperclipException:
+        return False
     
 def select_brand(brand_list, index):
     if index < 0 or index >= len(brand_list):
